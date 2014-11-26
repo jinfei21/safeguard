@@ -75,9 +75,11 @@ public abstract class BaseCommand<T> implements ICommand{
 	public String key() {
 		return key;
 	}
+	
 	public void setKey(String key) {
 		this.key = key;
 	}
+	
 	public String group() {
 		return group;
 	}

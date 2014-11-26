@@ -9,8 +9,8 @@ public class LongPercentBuffer extends PercentBuffer<Long>{
 		
 	}
 	
-	public long getPercent(double percent){
-		List<Long> snapshot = getSnapShot();
+	public long getPercent(List<Long> snapshot ,double percent){
+		
 		if(snapshot.size() == 0){
 			return 0;
 		}

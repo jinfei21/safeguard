@@ -19,4 +19,14 @@ public interface ISafeGuardConfig {
 	int commandMaxConcurrentCount();
 	
 	int metricsHealthSnapshotInterval();
+
+	int statWindowBuckets();
+	
+	int statWindowTime();
+	
+	int percentWindowBuckets();
+	
+	int percentWindowTime();
+	
+	int percentBucketSize();
 }
