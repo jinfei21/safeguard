@@ -121,9 +121,11 @@ public class SafeGuardMetrics implements IMetrics {
 	}
 
 	public HealthCounts getHealthSnapshot() {
-		long success = executeStatBuffer.getCount(Status.Success);
-		long fail = executeStatBuffer.getCount(Status.Fail);
-		long timeout = executeStatBuffer.getCount(Status.Timeout);
+		
+		
+		long success = executeDistributeSnapshot.get(Status.Success);
+		long fail = executeDistributeSnapshot.get(Status.Fail);
+		long timeout = executeDistributeSnapshot.get(Status.Timeout);
 		
 		long error = fail + timeout ;
 		long total = success + error;
